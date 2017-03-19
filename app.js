@@ -1,25 +1,38 @@
 window.addEventListener('load', init, false);
 function init() {
   console.log('init');
+  var timeLineMax = new TimelineMax();
+  //timeLineMax.staggerTo(".mainC", 1, {rotation:360, y:20}, 0.5);
+  timeLineMax.staggerTo(".path-letter", 0.4, {autoAlpha:0, scale:1,rotate:2}, 0.1);
+  function redo(){
+    console.log('hola');
+  }
+  //tm.from(".letterZ", 1, {opacity:0, ease:Power3.easeOut, repeat:-1, yoyo:true});
+
   //var element = $("#mainsvg");
-  //first text from left 2 right
-  TweenLite.to("#top-text", 1.5, {
+//{opacity:0.5, rotation:45})
+//TweenMax.to(element, 1, {opacity:0, onComplete:completeHandler, ease:Back.easeOut, useFrames:true});
+/*function startAnimation(){
+  TweenLite.set($startAnim, {autoAlpha:0});
+
+  //TweenMax.staggerFromTo( $demoText.find("span"), 0.4, {autoAlpha:0, scale:0}, {autoAlpha:1, scale:1}, 0.1, reset );
+
+  TweenMax.staggerFromTo( $demoText.find("span"), 0.4, {autoAlpha:0, scale:7}, {autoAlpha:1, scale:1}, 0.1, reset );	*/
+
+  //TweenMax.staggerFromTo(".path-letter".find("span"), 0.4, {autoAlpha:0, scale:0}, {autoAlpha:1, scale:1}, 0.1, reset );
+  TweenLite.to("#top-text", 3, {
     x: function(index) {
       console.log(index);
-      return index + 0.3 * 85 // 100, 200, 300
+      return index + 0.1 * 100 // 100, 200, 300
     }
   });
-	//underscore display
-	TweenLite.to("#underscore", 2, {opacity:0, display:"none"});
 	//second text from right 2 left
-	TweenLite.to("#second-text", 1.5, {
+	TweenLite.to("#second-text",4, {
     x: function(index) {
       console.log(index);
       return index - 0.2 * 75 // 100, 200, 300
     }
-  });
 
-
+});
 
 }
-//weenLite.to($('#mydiv') , 0.3, {autoAlpha: 1, display:'block'});
