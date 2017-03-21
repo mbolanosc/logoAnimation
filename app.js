@@ -7,19 +7,6 @@ function init() {
   function redo(){
     console.log('hola');
   }
-  //tm.from(".letterZ", 1, {opacity:0, ease:Power3.easeOut, repeat:-1, yoyo:true});
-
-  //var element = $("#mainsvg");
-//{opacity:0.5, rotation:45})
-//TweenMax.to(element, 1, {opacity:0, onComplete:completeHandler, ease:Back.easeOut, useFrames:true});
-/*function startAnimation(){
-  TweenLite.set($startAnim, {autoAlpha:0});
-
-  //TweenMax.staggerFromTo( $demoText.find("span"), 0.4, {autoAlpha:0, scale:0}, {autoAlpha:1, scale:1}, 0.1, reset );
-
-  TweenMax.staggerFromTo( $demoText.find("span"), 0.4, {autoAlpha:0, scale:7}, {autoAlpha:1, scale:1}, 0.1, reset );	*/
-
-  //TweenMax.staggerFromTo(".path-letter".find("span"), 0.4, {autoAlpha:0, scale:0}, {autoAlpha:1, scale:1}, 0.1, reset );
   TweenLite.to("#top-text", 3, {
     x: function(index) {
       console.log(index);
